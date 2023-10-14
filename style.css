@@ -1,24 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    background-image: url(./space.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    color: white;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    height: 300px;
+    background-color: rgba(128,128,128, 0.6);
+    border-radius: 10px;
+}
+.score{
+    text-decoration: underline;
+}
+.controls{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+.reset{
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
 .grid{
     display: flex;
     flex-wrap: wrap;
-    height: 300px;
-    width: 300px;
+    height: 600px;
+    width: 600px;
     border: solid 1px;
+    background-color: black;
+    border-radius: 10px;
 }
 .grid div{
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
 }
 .shooter{
-    background-color: blue;
+    background-image: url(./shooter.png);
+    background-size: cover;
+    background-position: center;
 }
 .invader{
-    background-color: purple;
+    background-image: url(./alien.png);
+    background-size: cover;
+    background-position: center;
     border-radius: 10px;
 }
 .boom{
-    background-color: red;
+    background-image: url(./boom.jpeg);
+    background-size: cover;
+    background-position: center;
 }
 .laser{
-    background-color: orange;
+    background-image: url(./laser.jpeg);
+    background-size: cover;
+    background-position: center;
 }

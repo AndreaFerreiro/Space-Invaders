@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const square = document.querySelectorAll('.grid div')
     const resultDisplay = document.querySelector('#result')
+    const reset = document.querySelector('.reset')
     let width = 15
     let currentShooterIndex = 202
     let currentInvaderIndex = 0
@@ -8,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let result = 0
     let direction = 1
     let invaderId
-
+    resultDisplay.textContent = result
     //define the alien invaders
     const alienInvaders = [
         0,1,2,3,4,5,6,7,8,9,
@@ -76,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         // decide a win
         if (alienInvadersTakenDown.length === alienInvaders.length -1){
-            resultDisplay.textContent ='You Win'
+            resultDisplay.textContent ='You Win!!'
             clearInterval(invaderId)
         }
     }
@@ -119,5 +120,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 break
         }
     }
+    
+    function handleReset (e) {
+        for (let i=0; i<square.length; i++){
+            square[i].classList.remove('invader')
+        }
+    }
+
     document.addEventListener('keyup', shoot)
+    reset.addEventListener('click',handleReset)
 })
